@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Aquí se enlaza el archivo html con el css, para estilizar esta página -->
+    <link rel="shortcut icon" href="img/1-logo-blanco.png" type="image/x-icon"> <!-- Este será el ícono que aparecerá al comienzo de la pestaña, antes del título -->
+    <title>Reaper Team</title> <!-- Este será el título que aparecerá en la pestaña -->
+</head>
+
+<body>
+
+    <!-- En esta primera sección he decidido incluir la etiqueta "nav", 
+    junto con las etiquetas "a" que nos ayudarán a navegar por la página.-->
+    
+    <section id="inicio">
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#eventos">Eventos</a>
+            <a href="#jugadores">Jugadores</a>
+            <a href="#contacto">Contactanos</a>
+        </nav>
+
+        <!-- Seguido del nav me pareció adecuado incluir el logo del Squad bien en grande para que sea atractivo y se 
+        entienda de qué va la página. -->
+        <img src="./img/6-logo-color.png" class="logo" alt="Logo del equipo (calavera)">
+
+        <!-- Por ultimo me pareció ideal añadir un h1 con un titulo bien llamativo que vaya al grano y explique qué es Reaper. -->
+        <h1>EL MEJOR EQUIPO DE LEAGUE OF LEGENDS</h1>
+    </section>
+
+    <!-- Entre sección y sección, decidí agregar las etiquetas "hr" para remarcar bien la separación de las secciones. -->
+    <hr>
+
+    <!-- Creé una nueva sección ya que es un contenido a parte, que nada tiene que ver con lo anterior. -->
+    <section id="eventos">
+
+        <!-- Esta sección es importante que esté al principio ya que es un contenido muy principal, se buscan promocionar
+        un evento para vender entradas y recibir el apoyo de los seguidores. -->
+        <h2>PRÓXIMO EVENTO</h2>
+        <div class="evento-semifinal">
+            
+            <!-- Este "p" es tan solo un texto descriptivo del evento.
+            Se añade una etiqueta "a" con "target blank", para poder abrir un link en una pestaña nueva sin irte de la página. -->
+            <p>En el ultimo domingo de agosto jugaremos la semifinal en el Movistar Arena contra uno de los 
+                equipos más icónicos de latinoamérica. <br> Tras este emocionante punto de encuentro en la 
+                grieta del invocador, sabremos quien es aquel que pasará a la final para ganar la copa BA Multiplica.
+                <br> No te prives de esta maravillosa experiencia, invita a todos tus amigos y asistan al evento más
+                emocionante del año. Pueden adquirir sus entradas haciendo 
+                <a target="_blank" href="https://youtu.be/dQw4w9WgXcQ">clic aquí</a>.
+            </p>
+
+            <!-- La imagen cuenta con el atributo "alt" el cual sirve para describir de qué va la imagen en caso de que esta 
+            no pudiera verse o mostrarse correctamente.-->
+            <img src="img/Evento-Movistar-Arena.png" alt="Movistar Arena - Semifinal de equipos">
+        </div>
+
+        <!-- Aquí por ultimo he decidido agregar una divertida lista para enumerar items varios en calidad de
+        información complementaria -->
+        <h3>Aspectos a tener en cuenta</h3>
+        <ul>
+             <li>Prohibido el ingreso de bebidas alcohólicas.</li>
+            <li>Evento Apto para Todo Público.</li>
+            <li>Pet friendly 🐶😼🐒</li>
+         </ul>
+
+    </section>
+
+    <hr>
+
+    <section id="jugadores">
+
+        <!-- Utilicé un h2 para marcar un titulo grande y un h3 para marcar un subtitulo, se puede apreciar la diferencia de tamaños -->
+        <h2>NUESTRO TEAM</h2>
+        <h3>Estos son nuestros jugadores</h3>
+
+        <!-- Creo un div contenedor, que va a contener CARDS -->
+        <div class="card-container">
+
+            <!-- La sección de jugadores presenta unos divs llamados "cards", que podrían describirse como tarjetas o cartas, conformadas
+            por una imagen y un texto debajo. En este caso lo use para presentar a los jugadores del equipo de una manera divertida. -->
+            <div class="card">
+                <img src="img/Jugador-1.jpg" alt="Tom">
+                <h3>Tom (top)</h3>
+                <p>El gato Tom se encarga de atrapar a todas las ratas que campean.</p>
+            </div>
+
+            <div class="card">
+                <img src="img/Jugador-2.jpg" alt="Batman">
+                <h3>Batman (jungla)</h3>
+                <p>El caballero de la noche, anda por los arbustos buscando venzanga.</p>
+            </div>
+            
+            <div class="card">
+                <img src="img/Jugador-3.jpg" alt="Jack Jack">
+                <h3>Jack Jack (mid)</h3>
+                <p>Confunde con su apariencia de bebé, pero puede ganar uno contra cinco.</p>
+            </div>
+
+            <div class="card">
+                <img src="img/Jugador-4.jpg" alt="Oaky">
+                <h3>Oaky (adc)</h3>
+                <p>El mejor pistolero del condado, carga dos revólveres letales.</p>
+            </div>
+
+            <div class="card">
+                <img src="img/Jugador-5.jpg" alt="Mono">
+                <h3>Mono (supp)</h3>
+                <p>Parece simpático pero es un mono cascarrabias y gruñón 🐒</p>
+            </div>
+
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="contacto">
+
+        <h2>Llena este formulario si deseas recibir <br> nuevas noticias sobre Reaper - Gaming Squad</h2>
+
+        <!-- Para esa ultima sección he decidido añadir un formulario donde el usuario puede dejar su nombre y mail
+        para que la Reaper Gaming Squad puedan enviarle contenido, promocional, información y novedades. -->
+
+        <div class="container-form">
+            <h2 class="titulo">Contacto</h2>
+            <form action="#" method="get" class="formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <!-- el tipo email nos obliga a completar con formato mail: xxx@xxxx.xxx -->
+
+                <!-- required especifica que es imposible enviar el formulario SIN completar los campos -->
+
+                <button type="button" onclick="enviarForm()">Enviar</button>
+            </form>
+        </div>
+
+        <!-- Se utilizó el método GET ya que es una solicitud sencilla que no requiere ocular datos ni mantenerlos de manera privada en la URL -->
+
+    </section>
+
+    <!-- Footer -->
+  <footer class="pie-pagina">
+
+    <div class="grupo-1">
+      <div class="box">
+        <!-- Aquí se utiliza "figure" por una cuestión semántica, en dónde añadimos al logo como un contenido independiente, 
+        el cual también, ayuda en la accesibildiad de la web. --> 
+        <figure>
+          <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
+            <img src="img/6-logo-color.png" alt="Logo de Reaper">
+          </a>
+        </figure>
+      </div>
+
+      <div class="box">
+        <h2>¿Queres sumarte al Squad?</h2>
+        <p>¡Estamos interesados en incluir nuevas personas en el equipo!</p>
+        <p>Si estás dispuesto a trabajar con nosotros, envíanos tu CV al mail ubicado
+          en la sección de contacto.</p>
+      </div>
+
+      <div class="box">
+        <h2>Contacto</h2>
+        <div class="mail">
+          <p>info@reapergamingsquad.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grupo-2">
+      <small>© 2023 Reaper Gaming Squad - Buenos Aires, Argentina. <br> Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <!-- Finalmente, para el footer me pareció bueno crear dos grupos: uno superior y otro inferior -->
+
+  <!-- El grupo 1 cuenta con tres cajas: 
+        1- Logo
+        2- Información
+        3- Dirección mail -->
+
+   <!-- En el grupo 2 hay un breve escrito de copyright y derechos de autor, con una etiqueta para que el texto sea
+    de un tamaño pequeño. -->
+
+    <script src="/main.js"></script>
+</body>
+</html>

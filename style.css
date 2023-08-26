@@ -1,0 +1,246 @@
+/* Comencé estableciendo la fuente con la que deseo trabajar en toda la página, 
+le puse el nombre de la fuente y seguido la ruta de mi fuente instalada */
+
+@font-face {
+    font-family: "Sugo Pro Display";
+    src: url(/Sugo-Pro-Display-Regular-trial.ttf);
+}
+
+/* Para el body solo establecí que todo el fondo sería de color negro, ya que
+me parece un color agresivo que representa al equipo Reaper. */
+body{
+    background-color: #040303;
+}
+
+/* La barra de navegación tiene una altura de 100px para espaciar su alrededor.
+diplay flex da lugar a que podamos centrar con el uso de justify content y align items center.*/
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+/* "nav a" indica que solo se va a estilizar la etiqueta a que esté dentro del nav*/
+nav a{
+    font-family: "Sugo Pro Display"; /* se aplica la fuente anteriormente seleccionada */
+    color: #e43f25; /* se establece un color de letra */
+    text-decoration: none; /* elimina el subrayado del texto */
+    font-size: 60px; /* proporciona un tamaño a la letra */
+    margin: 0 30px;  /* da un espaciado entre las etiquetas "a" */
+}
+
+nav a:hover{
+    transform: scale(1.2); /* Indica que cuando se posicione el puntero sobre el texto, este escalará (crecerá) el tamaño indicado */
+}
+
+.logo{
+
+    /* Se aplican estas propiedades para centrar el logo automáticamente */
+    display: flex; 
+    margin: auto;
+
+    /* Con width y height se estableció el tamaño en pixeles, aunque también 
+    puede ser establecido con porcentajes. */
+    width: 600px;
+    height: 600px;
+}
+
+/* Para este h1 simplemente se estableció la fuente, el color de la letra,
+el texto centrado y un tamaño del texto de 60 pixeles. */
+h1{
+    font-family: "Sugo Pro Display";
+    color: #f3e4ca;
+    text-align: center;
+    font-size: 60px;
+}
+
+/* La etiqueta "a" en general, carga consigo la fuente, 
+el color rojo y la eliminación del subrayado */
+a{
+    font-family: "Sugo Pro Display";
+    color: #e43f25;
+    text-decoration: none;
+}
+
+/* SECCIÓN DEL EVENTO */
+
+/* Se llama a la sección eventos mediante un numeral, lo cual indica que llama a la ID.*/
+#eventos{
+    font-family: "Sugo Pro Display";
+    color: #f3e4ca;
+    font-size: 40px;
+}
+
+#eventos h2, h3{
+    color: #f23f26;
+    text-align: center;
+}
+
+.evento-semifinal{
+    display: flex; /* Gracias a esto, el texto y la imagen estan alineados al mismo nivel y no una bajo otro */
+
+    /* Aquí se  aplican espaciados en los laterales del texto, para que no queden pegados a los bordes.*/
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.evento-semifinal img{
+    width: 25%; 
+    margin-right: 50px; /* Espaciado lateral derecho, de 50 pixeles. */
+    border-radius: 15px; /* Redondea los bordes de la imagen */
+}
+
+
+/* SECCIÓN DE JUGADORES */
+
+#jugadores{
+    font-family: "Sugo Pro Display";
+    color: #f3e4ca;
+    font-size: 40px;
+}
+
+#jugadores h2{
+    color: #f23f26;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    flex: 0 0 calc(20% - 20px); /* Sirve para la distribución del espacio entre las cards para conseguir simetría*/
+    padding: 10px;
+    border: 1px solid #48332b;
+    text-align: center;
+    padding-top: 30px;
+    
+}
+
+.card img {
+    border-radius: 10px;
+}
+
+
+/* SECCION DE CONTACTO */
+
+#contacto h2{
+    font-family: "Sugo Pro Display";
+    color: #f23f26;
+    text-align: center;
+    font-size: 60px;
+}
+
+.container-form {
+    background-color: #f3e4ca;
+    font-family: "Sugo Pro Display";
+    text-align: center;
+    border-radius: 20px;
+    max-width: 300px;
+    width: 80%;
+    margin: 0 auto; /* Automaticamente centra el formulario (combinado con display flex, centra verticalmente) */
+    height: 60vh;
+    display: flex;
+    flex-direction: column; /* Alinea verticalmente */
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.titulo {
+    font-size: 60px;
+    color: #e43f25;
+    margin-bottom: 10px;
+}
+
+.formulario {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+}
+
+button {
+    background-color: #e43f25;
+    color: white;
+    border: none; /* Elimina los bordes del botón */
+    padding: 10px 20px; /* Genera espaciados dentro del botón, horizontalmente y verticalmente */
+    border-radius: 5px;
+    cursor: pointer; /* Indica que el botón es clickeable, convirtiendo el puntero flechita en una manito */
+    transition: background-color 0.3s; /* Al posicionar el puntero, el color cambia paulatinamente */
+}
+
+/* Al posicionar el puntero, este cambia a un color más oscuro */
+button:hover {
+    background-color: #d32c0c;
+}
+
+
+/* FOOTER */
+.pie-pagina{
+    width: 100%;
+    background-color: #48332b;
+}
+
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Esto define una cuadrícula con 3 columnas, cada una con un ancho igual (fr: fracción) */
+    grid-gap: 50px; /* Es la separación de 50 píxeles entre las columnas y filas de la cuadrícula */
+    padding: 45px 0px;
+}
+
+/* Estilización para el logo en el footer */
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img{
+    width: 200px;
+}
+
+.pie-pagina .grupo-1 .box h2{
+    font-family: "Sugo Pro Display";
+    color: #e43f25;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.pie-pagina .grupo-1 .box p{
+    font-family: "Sugo Pro Display";
+    font-size: 20px;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .mail p:hover{
+    color: #e43f25;
+}
+
+.pie-pagina .grupo-2{
+    background-color: #48331e;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
